@@ -8,6 +8,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.testng.asserts.SoftAssert;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -33,7 +34,6 @@ public class GoogleMapsTestSuite {
     @Test
     public void AddandDeletePlace()
     {
-
         //Task 1- Grab the response
         log.info("Host information"+properties.getProperty("HOSTGoogle"));
         RestAssured.baseURI = properties.getProperty("HOSTGoogle");
@@ -65,5 +65,11 @@ public class GoogleMapsTestSuite {
                 post("/maps/api/place/delete/json").
                 then().assertThat().statusCode(200).and().contentType(ContentType.JSON).and().
                 body("status",equalTo("OK"));
+
     }
+
+
+
+
+
 }

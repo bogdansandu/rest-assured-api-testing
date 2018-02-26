@@ -8,7 +8,7 @@ dependency-reduced-pom.xml
 .idea/
 *.iml
 *.html
-screenshots*
+logs/
 
 
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
