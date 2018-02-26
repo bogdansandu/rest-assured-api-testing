@@ -9,8 +9,6 @@ dependency-reduced-pom.xml
 *.iml
 *.html
 screenshots*
-workspace.xml
-vcs.xml
 
 
 # Avoid ignoring Maven wrapper jar file (.jar files are usually ignored)
